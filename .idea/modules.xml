@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/discovery-server/.mvn/.mvn.iml" filepath="$PROJECT_DIR$/discovery-server/.mvn/.mvn.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hospital-Information-System.iml" filepath="$PROJECT_DIR$/Hospital-Information-System.iml" />
       <module fileurl="file://$PROJECT_DIR$/admissions-service/admissions-service.iml" filepath="$PROJECT_DIR$/admissions-service/admissions-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/discovery-server/discovery-server.iml" filepath="$PROJECT_DIR$/discovery-server/discovery-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/discovery-server/discovery-server.iml" filepath="$PROJECT_DIR$/discovery-server/discovery-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/hr-service/hr-service.iml" filepath="$PROJECT_DIR$/hr-service/hr-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/discovery-server/src/main/main.iml" filepath="$PROJECT_DIR$/discovery-server/src/main/main.iml" />
       <module fileurl="file://$PROJECT_DIR$/pathology-service/pathology-service.iml" filepath="$PROJECT_DIR$/pathology-service/pathology-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/discovery-server/src/test/test.iml" filepath="$PROJECT_DIR$/discovery-server/src/test/test.iml" />
     </modules>
   </component>
 </project>
