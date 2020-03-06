@@ -21,13 +21,13 @@ public class HrResources {
 
   @RequestMapping("/employees")
   public EmployeesList getEmployees(){
-    log.info("/employees request");
+    log.info("/employees request by HR service");
     return new EmployeesList(employees);
   }
 
   @RequestMapping("/employees/{id}")
   public Employee getEmployeeById(@PathVariable("id") String id){
-    log.info("/employees/{id}  request");
+    log.info("/employees/{id}  request by HR service");
     return employees.stream()
         .filter(employee -> employee.getId().equals(id))
         .findAny()

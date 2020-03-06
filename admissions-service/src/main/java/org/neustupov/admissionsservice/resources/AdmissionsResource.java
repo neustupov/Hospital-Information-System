@@ -3,6 +3,7 @@ package org.neustupov.admissionsservice.resources;
 import java.util.Arrays;
 import java.util.List;
 import lombok.extern.log4j.Log4j2;
+import org.neustupov.admissionsservice.model.DiseaseList;
 import org.neustupov.admissionsservice.model.EmployeesList;
 import org.neustupov.admissionsservice.model.Patient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,19 +26,25 @@ public class AdmissionsResource {
 
   @RequestMapping("/physicians")
   public EmployeesList getPhysicians(){
-    log.info("/physicians  request");
+    log.info("/physicians  request to HR Service");
     return restTemplate.getForObject("http://localhost:8091/hr/employees", EmployeesList.class);
+  }
+
+  @RequestMapping("/diseases")
+  public DiseaseList getDiseases(){
+    log.info("/diseases  request to Pathology Service");
+    return restTemplate.getForObject("http://localhost:8092/pathology/diseases", DiseaseList.class);
   }
 
   @RequestMapping("/patients")
   public List<Patient> getPatients() {
-    log.info("/patients  request");
+    log.info("/patients  request by Admissions service");
     return patients;
   }
 
   @RequestMapping("/patients/{id}")
   public Patient getPatientById(@PathVariable("id") String id) {
-    log.info("/patients/{id}  request");
+    log.info("/patients/{id}  request by Admissions service");
     return patients.stream()
         .filter(patient -> patient.getId().equals(id))
         .findAny()
