@@ -27,13 +27,13 @@ public class AdmissionsResource {
   @RequestMapping("/physicians")
   public EmployeesList getPhysicians(){
     log.info("/physicians  request to HR Service");
-    return restTemplate.getForObject("http://localhost:8091/hr/employees", EmployeesList.class);
+    return restTemplate.getForObject("http://hr-service/hr/employees", EmployeesList.class);
   }
 
   @RequestMapping("/diseases")
   public DiseaseList getDiseases(){
     log.info("/diseases  request to Pathology Service");
-    return restTemplate.getForObject("http://localhost:8092/pathology/diseases", DiseaseList.class);
+    return restTemplate.getForObject("http://pathology-service/pathology/diseases", DiseaseList.class);
   }
 
   @RequestMapping("/patients")
